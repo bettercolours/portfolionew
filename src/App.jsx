@@ -612,7 +612,7 @@ export default function Portfolio() {
 
       {/* Custom cursor */}
       <div style={styles.cursor} />
-      
+
       {/* Grain overlay */}
       <div style={styles.grain} />
 
@@ -685,7 +685,7 @@ export default function Portfolio() {
           <div style={{ position: "absolute", top: "120px", right: "48px", width: "200px", height: "200px", border: "1px solid rgba(201,168,76,0.06)", borderRadius: "50%", pointerEvents: "none", zIndex: 1 }} />
           <div style={{ position: "absolute", top: "140px", right: "68px", width: "160px", height: "160px", border: "1px solid rgba(201,168,76,0.04)", borderRadius: "50%", pointerEvents: "none", zIndex: 1 }} />
 
-          <div style={{ maxWidth: "1200px", margin: "0 auto", paddingLeft: "24px", paddingRight: "48px", position: "relative", zIndex: 2 }}>
+          <div style={{ maxWidth: "1200px", margin: "0 240px", paddingLeft: "24px", paddingRight: "48px", position: "relative", zIndex: 2 }}>
             {/* Open to Work badge */}
             <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "8px 18px", border: "1px solid rgba(120,200,120,0.35)", background: "rgba(80,160,80,0.08)", marginBottom: "28px", animation: "fadeUp 0.7s ease 0.1s forwards", opacity: 0 }}>
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#6BCB77", display: "inline-block", boxShadow: "0 0 8px #6BCB77", animation: "pulse 2s infinite" }} />
@@ -822,8 +822,26 @@ export default function Portfolio() {
                       </div>
                       <div style={styles.caseOutcome}>↑ {cs.outcome}</div>
                       <p style={styles.caseDesc}>{cs.desc}</p>
-                      <div style={{ marginTop: "28px" }}>
-                        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "10px", color: hoveredCase === cs.id ? cs.color : (hasPdf ? "#706856" : "#555"), letterSpacing: "0.15em", transition: "color 0.3s" }}>
+                      <div
+                        style={{ marginTop: "28px", cursor: "pointer" }}
+                        onClick={(e) => {
+                          e.stopPropagation(); // 🔥 prevents parent click
+                          if (hasPdf) {
+                            window.open(cs.pdf, "_blank"); // ✅ dynamic path
+                          } else {
+                            setRequestOpen(true);
+                          }
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontFamily: "'DM Mono', monospace",
+                            fontSize: "10px",
+                            color: hoveredCase === cs.id ? cs.color : (hasPdf ? "#706856" : "#555"),
+                            letterSpacing: "0.15em",
+                            transition: "color 0.3s"
+                          }}
+                        >
                           {hasPdf ? "VIEW CASE STUDY →" : "REQUEST ACCESS →"}
                         </span>
                       </div>
