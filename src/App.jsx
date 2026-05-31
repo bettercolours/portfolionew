@@ -656,7 +656,7 @@ export default function Portfolio() {
           <div style={{
             position: "absolute",
             top: 0, right: 0,
-            width: "10%",
+            width: "38%",
             height: "85%",
             bottom: "0",
             top: "auto",
