@@ -665,7 +665,7 @@ export default function Portfolio() {
             overflow: "hidden",
           }}>
             <img
-              src="/Sumeetha_Portrait.jpg"
+              src="/Sumeetha_image.png"
               alt=""
               style={{
                 width: "100%",
