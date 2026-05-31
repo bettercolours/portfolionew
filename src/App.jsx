@@ -28,7 +28,7 @@ const CASE_STUDIES = [
     outcome: "Faster component delivery",
     desc: "Designed and implemented an enterprise-grade design library for an Oil & Gas SaaS ecosystem. Led the complete product revamp, modernising legacy interfaces into a high-performance, user-centric experience tailored for the Middle East market.",
     color: "#8B9EA8",
-    pdf: "/2.SaaS project.pdf", // set to "/project02.pdf" when ready
+    pdf: "2.SaaS project.pdf", // set to "/project02.pdf" when ready
   },
   {
     id: "03",
