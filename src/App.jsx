@@ -1000,16 +1000,13 @@ export default function Portfolio() {
                 <p style={{ fontSize: "16px", lineHeight: 1.8, color: "#A09884", marginBottom: "40px", maxWidth: "420px" }}>
                   After a focused consulting stint, I'm ready for my next chapter — a full-time leadership role or a meaningful engagement where great design has real stakes. If that sounds like something you're hiring for, I'd genuinely love to talk.
                 </p>
-                <button className="cta-hover" style={{ ...styles.ctaBtn }} onMouseEnter={() => setCursorActive(true)} onMouseLeave={() => setCursorActive(false)}>
-                  Start a Conversation →
-                </button>
               </FadeIn>
               <FadeIn delay={0.2}>
                 <div>
                   {[
                     ["Email", "sagisumee@gmail.com", "mailto:sagisumee@gmail.com"],
                     ["Phone", "+91 95388 66197", "tel:+919538866197"],
-                    ["LinkedIn", "linkedin.com/in/sumeethsuppiah", "https://linkedin.com/in/sumeethsuppiah"],
+                    ["LinkedIn", "linkedin.com/in/sumeethsuppiah", "https://www.linkedin.com/in/sumeetha-suppiah-11a51744/"],
                     ["Location", "Chennai, India · Remote Worldwide", null],
                   ].map(([label, val, href]) => (
                     <div key={label} style={styles.contactItem}>
