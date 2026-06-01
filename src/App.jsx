@@ -1006,7 +1006,7 @@ export default function Portfolio() {
                   {[
                     ["Email", "sagisumee@gmail.com", "mailto:sagisumee@gmail.com"],
                     ["Phone", "+91 95388 66197", "tel:+919538866197"],
-                    ["LinkedIn", "linkedin.com/in/sumeethsuppiah", "https://www.linkedin.com/in/sumeetha-suppiah-11a51744/"],
+                    ["LinkedIn", "linkedin.com/in/sumeethasuppiah", "https://www.linkedin.com/in/sumeetha-suppiah-11a51744/"],
                     ["Location", "Chennai, India · Remote Worldwide", null],
                   ].map(([label, val, href]) => (
                     <div key={label} style={styles.contactItem}>
